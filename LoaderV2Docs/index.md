@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Autonomous Formulation Lab (AFL) is a modular hardware system designed to be the make complex liquid formulations on-the-fly and transfer them pneumatically to one or more measurement instruments.  It is the physical world "body" of the AFL-agent codebase, which seeks to provide orders-of-magnitude acceleration in mapping complex soft matter phase diagrams. It is built around a pipetting robot, presently only Opentrons OT-2 robots are supported (but Jubilee support is in development), but the pneumatic sample transfer system is custom, open hardware.  This manual describes the construction of a complete AFL platform
+The Autonomous Formulation Lab (AFL) is a modular hardware system designed to make complex liquid formulations on-the-fly and transfer them pneumatically to one or more measurement instruments.  It is the physical world "body" of the AFL-agent codebase, which seeks to provide orders-of-magnitude acceleration in mapping complex soft matter phase diagrams. It is built around a pipetting robot, presently only Opentrons OT-2 robots are supported (but Jubilee support is in development), but the pneumatic sample transfer system is custom, open hardware.  This manual describes the construction of a complete AFL platform
 
 >!! A forward: these instructions assume some basic "scientific handyperson" skills: use of hand and power tools such as drills and screwdrivers, basic soldering, etc. These tasks have different hazard profiles than many scientific/experimental activities, but are hazardous nonetheless, in fact far more people lose eyesight due to chips from drilling than from laboratory chemical spills. Be vigilant and get help if you don't know how to do something safely, follow your institution's rules, and stay safe.
 
@@ -14,6 +14,7 @@ The AFL platform consists of several modular components that work together:
 2. **In-Robot Module**: Components installed inside the OT-2 robot, including the catch mechanism, piston, and valve box.
 
 The remaining modules are typically installed in a "side rack" of 80/20 rail bolted to the OT-2 frame:
+
 3. **Pneumatic Module**: Controls air pressure for fluid dispensing and actuator movement.
 4. **Electronics Module**: Houses the main control system, including Raspberry Pi and interface boards.
 5. **Video-UI Module**: Provides video capture/recording and user interface capabilities.
@@ -21,14 +22,14 @@ The remaining modules are typically installed in a "side rack" of 80/20 rail bol
 
 ## Build Options
 
-The AFL system can be built in different configurations with different supoprt hardware depending on your specific needs:
+The AFL system can be built in different configurations with different support hardware depending on your specific needs:
 
 1. **Pneumatic Controller** can be either a Nordson EFD Ultimus regulator, or a McMaster-Carr regulator (which requires a 0-10 V digital out on the system).  We suggest the McMaster-Carr option if you are comfortable with custom electronics
 
 2. **Relay Control** can be done with one of: 
-a. a Pi-Plates RELAYplate attached to a Raspberry Pi, powered by a Pi-Plates POWERplate2.  (Collectively, the "classic electronics module")
-b. a LabJack RB12 connected to a LabJack T4 device.  Slightly more robust control, but a separate device, more components, substantially higher cost.
-c. a generic USB relay board from Amazon.  Performance of this alternative is not well tested.
+   - A Pi-Plates RELAYplate attached to a Raspberry Pi, powered by a Pi-Plates POWERplate2.  (Collectively, the "classic electronics module")
+   - A LabJack RB12 connected to a LabJack T4 device.  Slightly more robust control, but a separate device, more components, substantially higher cost.
+   - A generic USB relay board from Amazon.  Performance of this alternative is not well tested.
 
 
 ## Manufacturing Methods
@@ -66,4 +67,4 @@ These instructions are structured in rough chronological order, but pages separa
 
 * [Preparing Raspberry Pi SD Cards](PrepareRaspberryPis.md)
 * [Complete Parts List](Parts.yaml)
-* [Bill of Materials]{BOM}
+* [Bill of Materials](Parts.yaml){BOM}
