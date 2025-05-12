@@ -9,6 +9,8 @@ The in-robot module is the combination of actuator, piston head, catch, frame, a
 
 ## Assemble the valve box {pagestep}
 
+{{includetext: "[![](models/AFL-101-003-01-0C.stl)](models/AFL-101-003-01-0C.stl){previewpage}", if: targetformat is html}}
+
 * 3D Print the [AFL in-robot valve box](ValveBox.md){Qty: 1} and tap the two, 1/4"-20 threaded holes on the side.
 * Attach 2 [1/8" x 10-32 push connect fittings](Parts.yaml#PushConnectFitting1032){Qty: 6} to each of the 3 [low-flow solenoid valves](Parts.yaml#LowFlowSolenoidValve){Qty: 3} and tighten to engage the O-ring on the fitting.  Do not use teflon tape on these threads; the O-ring is doing that job.
 * Insert the assembled valves into the box and thread their wires down through the grooves on the bottom into the "electronics area" on the rear of the box.  It can be helpful to label one wire from each valve (these will be the negative terminal and will all be tied together).  
@@ -35,6 +37,8 @@ The in-robot module is the combination of actuator, piston head, catch, frame, a
 
 ## Assemble the interlock harness {pagestep}
 
+{{includetext: "[![](models/AFL-101-004-01-0A.stl)](models/AFL-101-004-01-0A.stl){previewpage}", if: targetformat is html}}
+
 This is a separate component because there is significant risk of inductive crosstalk between the 24V solenoid/relay lines and these switches which can fry DAQ hardware.  It’s happened, several times.
 
 * 3D print the [robot door switch carrier](RobotDoorSwitchCarrier.md){Qty: 1}; multiple copies can be helpful as this is a fragile part.  
@@ -50,6 +54,10 @@ This is a separate component because there is significant risk of inductive cros
 
 ## Assemble the actuator frame {pagestep}
 
+{{includetext: "[![](models/AFL-101-002-01-0D.stl)](models/AFL-101-002-01-0D.stl){previewpage}", if: targetformat is html}}
+{{includetext: "[![](models/AFL-101-002-01-2B.stl)](models/AFL-101-002-01-2B.stl){previewpage}", if: targetformat is html}}
+{{includetext: "[![](models/AFL-101-002-01-1A.stl)](models/AFL-101-002-01-1A.stl){previewpage}", if: targetformat is html}}
+
 * 3D print the [AFL Actuator Frame](AFLActuatorFrame.md){Qty: 1}, [Actuator Piston Arm](AFLActuatorPistonArm.md){Qty: 1}, and [Actuator Full-Up Microswitch Arm](AFLActuatorFullUpMicroswitchArm.md){Qty: 1}.  Tap the two #4-40 holes in the microswitch arm using a [4-40 tap]{Qty: 1, Cat: tool} and the two #2-56 holes  each on the arm and frame using a [2-56 tap]{Qty: 1, Cat: tool}.
 * Prepare the [pneumatic clamp](Parts.yaml#PneumaticClamp){Qty: 1} by removing the two 1/8" NPT plugs from the rear fitting holes using a [SIZE hex key]{Qty: 1, cat: tool}, switching them into the side holes, and installing two [1/8" NPT x 1/4" tube push connectors](Parts.yaml#PushConnector18NPTto14Tube){Qty: 2} into the NPT holes.  Use [teflon pipe thread tape]{Qty: some} on connections.
 >! *Caution*
@@ -62,6 +70,9 @@ This is a separate component because there is significant risk of inductive cros
 * Using a [wrench size for 3/8" bolt]{Qty: 1, Cat: tool}, mount the [Actuator Piston Arm] to the actuator.  Be cautious with this mounting.  It needs to be firm, but not so firm you crack the arm.  It should resist a moderate rotational force from the end of the arm without slipping.
 
 ## Install the piston and catch into the frame {pagestep}
+
+{{includetext: "[![](models/AFL-101-002-01-3B.stl)](models/AFL-101-002-01-3B.stl){previewpage}", if: targetformat is html}}
+
 * Take the [AFL piston](AFLPistonCatch.md){Qty: 1} and [AFL Catch](AFLPistonCatch.md){Qty: 1}.  Start with the catch alone first and rotate the piston arm to the fully-up position. 
 * You may find it helpful to make up the fluidic connection on the catch bottom first using [1/16" PP or ETFE tubing]{Qty: some} and [1/4"-28 x 1/16" tube flangeless nuts and ferrules]{Qty: 1}  
 >i **Note**
@@ -92,6 +103,8 @@ This is a separate component because there is significant risk of inductive cros
 * Connect the limit switch harness to the electronics module using a RJ45 cable.
 
 ## Install the in-robot module in the OT-2 {pagestep}
+
+{{includetext: "[![](models/In-Robot Assembly Full.stl)](models/In-Robot Assembly Full.stl){previewpage}", if: targetformat is html}}
 
 * Ensure the OT-2 is powered off before installing the in-robot module.
 * Carefully place the assembled in-robot module into slot 10 of the OT-2 deck. The module should fit securely with the pneumatic clamp aligned with the deck slot.

@@ -27,6 +27,9 @@ Materials:
 
 ## Assemble the frame and main components {pagestep}
 
+{{includetext: "[![](models/AFL-102-004-01-0D.stl)](models/AFL-102-004-01-0D.stl){previewpage}", if: targetformat is html}}
+{{includetext: "[![](models/AFL-102-004-01-1B.stl)](models/AFL-102-004-01-1B.stl){previewpage}", if: targetformat is html}}
+
 * 3D print the [AFL Pneumatic System Frame]{Qty: 1} if not already available.
 
 * Mount the [FiveWayValve]{Qty: 1} to the designated position on the frame using [M4x10 screws]{Qty: 4} and a [No. 2 Phillips screwdriver]{Qty: 1, Cat: tool}. The valve should be oriented with the main port facing the input side of the frame.

@@ -26,6 +26,9 @@ Materials:
 		4 x  #2-56 x ¼” screws (length need not be exact)
  
 ## Prepare the Housing {pagestep}
+
+{{includetext: "[![](models/AFL-102-003-01-0C.stl)](models/AFL-102-003-01-0C.stl){previewpage}", if: targetformat is html}}
+
 * 3D print the [AFL Electronics Module]{Qty: 1}, [AFL Electronics Module Cover]{Qty: 1}, and [AFL Electronics Module Top Cover]{Qty: 1} and tap the 4 cover mounting holes using a [#4-40 tap]{Qty: 1, Cat: tool}, and the 4 Raspberry Pi mounting holes using a [#2-56 tap]{Qty: 1, Cat: tool}.		
 ## Prepare the Raspberry Pi and other boards {pagestep}
 The base of the electronics stack is a [Raspberry Pi]{Qty: 1}.  
