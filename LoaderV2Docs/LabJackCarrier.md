@@ -17,6 +17,7 @@ The role of the LabJack carrier module is to consolidate a LabJack T4 with the c
 
 ## Prepare the LabJack and other boards {pagestep}
 
+![LabJack on carrier board](images/lj-on-carrier-board.jpg)
 
 Mount the LabJack to the board using two [8-32 screws]{Qty: 2}.  
 
@@ -28,9 +29,15 @@ Secure the board area cover using 2 [4-40 screws, 1/2" long]{Qty: 2}.
 
 ## Make up LabJack connections
 
+![LJTick-DAC mounted](images/ljtick-dac-mounted.jpg)
+
 If using the digital out to drive the dispense controller, install a [LJTick-DAC]{Qty: 1} to the LabJack on the block with FIO7 at the top.  Double check that the silkscreen on the LJtick matches the LabJack: VS to VS, GND to GND, DIOA to FIO6, and DIOB to FIO7.  Tighten the 4 terminal screws.
 
 Connect the wiring harness from the OCB board (either floating or in the mounting frame) to the LabJack: red to VS, black to GND, green (sensor reset/calibrate) to FIO4, white (sensor voltage) to AIN0.  If using a second sensor, wire it as above but green to FIO5 and white to AIN1.
+
+![Sensor hookup to LabJack detail](images/sensor-hookup-to-labjack-detail.jpg)
+
+![Sensor hookup to LabJack detail 2](images/sensor-hookup-to-labjack-detail-2.jpg)
 
 Take the [connector for the dispense controller]{Qty: 1} and connect it to the LJTick-DAC: white (input) to DACA, blue (common) to GND.  We will need to route 24V power to the device using brown (24V).  Black (output) will not be used.
 

@@ -59,18 +59,16 @@ This guide provides instructions for preparing Raspberry Pi SD cards for use in 
 * You can now use Ansible to manage the software on the Pi.  Ansible is a configuration management tool that allows you to manage the software on the Pi from a remote computer, keeping it up to date and centralizing its management.  The below instructions are retained for reference but are not strictly needed if Ansible deployment is used.
 * To run Ansible commands, you will need to have the `ansible` command installed on the computer you are using as the AFL controller.  You can install it using `pip3 install ansible`.
 * See full instructions, playbooks, etc. in the `AFL-automation` repo, deploy directory.
-* To provision a pi, you will need to add it to the `inventory` file in the `AFL-automation` repo, and run the `afl-pis.yaml` playbook.
+* To provision a pi, you will need to add it to the `inventory` file in the `AFL-automation` repo, and run the `setup-afl-python-env.yaml` playbook:
+    `ansible-playbook -i hosts.ini setup-afl-python-env.yaml`
 
 ## Module-specific configurations {pagestep}
 
 ### For the Loader Electronics Module (`piloader`)
 
-* Install the required libraries for the PiPLATES modules:
-  ```bash
-  sudo apt update
-  sudo apt install -y python3-pip
-  sudo pip3 install pi-plates
-  ```
+* Run the loader-specific playbook which will download and install the LabJACK software.
+
+`ansible -i hosts.ini install-loader-extras.yaml`
 
 
 ### For the Video Module (`pivideo`)

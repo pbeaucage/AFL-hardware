@@ -27,6 +27,8 @@ Materials:
 
 {{includetext: "[![](models/AFL-102-003-01-0C.stl)](models/AFL-102-003-01-0C.stl){previewpage}", if: targetformat is html}}
 
+![Empty electronics module housing](images/electronicsmodule_empty_housing.jpg)
+
 * 3D print the [AFL Electronics Module]{Qty: 1}, [AFL Electronics Module Cover]{Qty: 1}, and [AFL Electronics Module Top Cover]{Qty: 1} and tap the 4 cover mounting holes using a [#4-40 tap]{Qty: 1, Cat: tool}, and the 8 Raspberry Pi and LabJack mounting holes using a [#2-56 tap]{Qty: 1, Cat: tool}.		
 ## Prepare the Raspberry Pi and other boards {pagestep}
 The base of the electronics stack is a [Raspberry Pi]{Qty: 1}.  
@@ -42,7 +44,9 @@ The base of the electronics stack is a [Raspberry Pi]{Qty: 1}.
 See the Pi-Plates POWERplate24 docs [here](https://pi-plates.com/powerplate24-users-guide/) for more details.
 
 
-* From the Pi-plates POWERplate bag, remove the heatsinks and install them on the Pi - the large silver chip, the one above it , and the one above and to the right of that: 
+* From the Pi-plates POWERplate bag, remove the heatsinks and install them on the Pi - the large silver chip, the one above it , and the one above and to the right of that:
+
+![Raspberry Pi mounted with heatsinks](images/electronicsmodule_pi_mounted_with_heatsinks.jpg) 
 
 * Install the provided realtime clock battery in the PowerPLATE24.
 
@@ -54,19 +58,35 @@ See the Pi-Plates POWERplate24 docs [here](https://pi-plates.com/powerplate24-us
 
 * Align the 40 pin header of the [Pi-Plates PowerPLATE24]{Qty:1} to the Raspberry Pi and press down firmly to seat.  Attach the PowerPLATE to the standoffs for mounting using nesting standoffs.
 
-* On the RelayPLATE, we need to jumper the 24V input across the common of all relays.  I usually do this with short lengths of wire like so: 
+* On the RelayPLATE, we need to jumper the 24V input across the common of all relays.  I usually do this with short lengths of wire like so:
+
+![Relay plate bare](images/electronics_module_relayplate_bare.jpg)
+
+![Relay plate jumpered](images/electronics_module_relayplate_jumpered.jpg)
+
+![Relay plate jumpered top view](images/electronics_module_relayplate_jumpered_top.jpg) 
 
 
 Leave a long, dangling end of wire to connect to the main shutoff switch.
 
+![Relay power feed](images/electronicsmodule_relay_powerfeed.jpg)
+
 * Align the 40 pin header of the [Pi-Plates RelayPLATE]{Qty: 1} to the Raspberry Pi and press down firmly to seat.  Attach the RelayPLATE to the standoffs for mounting using screws.
+
+![Relays attached](images/electronics_module_relays_attached.jpg)
 
 
 ## Prepare the housing and components {pagestep}
 
 * To the [solder-cup DB9 female connector, panel mount]{Qty: 1} solder jumper wires to pins 1-6.  These will match the pinout used in the in-robot module, so it may be prudent to match colors if you used them or will use them there.  But it is entirely arbitrary.  Note down the pin number and corresponding color for later.
 
+![DB9 assembly detail](images/electronics_module_db9_assemblydetail.jpg)
+
+![DB9 connector dressed](images/electronics_module_db9_connector_dressed.jpg)
+
 * Prepare the female RJ45 connector to connect to the pneumatic module.  Take a punchdown-style RJ45 jack and run jumper wires matching the pneumatic module:
+
+![RJ45 assembly](images/electronicsmodule_rj45_assembly.jpg)
 
 | Pin | Color | Function |
 | --- | --- | --- |
@@ -83,6 +103,8 @@ As above, the colors are entirely arbitrary.  I recommend using one wire for all
 
 * Prepare the female RJ45 connector to connect to the interlock harness.  Take a punchdown-style RJ45 jack and run jumper wires (I like to use [RasPi pin jumper wires]{Qty: 4}) matching the interlock harness:
 
+![Interlock RJ45 dressed](images/electronics_module_interlock_rj45_dressed.jpg)
+
 | Pin | Color | Function |
 | --- | --- | --- |
 | 1   | Blue   | Arm Up |
@@ -98,12 +120,16 @@ As above, the colors are entirely arbitrary.  I recommend using one wire for all
 
 * To the power outlet connector (2 pin) removed from the PowerPlate, attach a length of [2 conductor hookup wire]{Unit: ft, Qty_Value: 6}.  This will power the dispense controller.  Common on the right pin, positive on the left.
 
-* Start installing the prepared wire harnesses to the housing.   I like to start with the DC connector.  You can go ahead and connect the main (Pi) power harness at this time: 
+* Start installing the prepared wire harnesses to the housing.   I like to start with the DC connector.  You can go ahead and connect the main (Pi) power harness at this time:
+
+![Power connector occupied](images/electronics_module_power_connector_occupied.jpg) 
 
 Next the DB9 connector, threading the wires in from the outside and securing with glue or standoff screws:
 
 
 Next, the RJ45 connectors.  Let's start with the pneumatic module one.  These standard keystone jacks snap in from the inside with an upward twist.  It can take a bit of force, but they should seat solidly.  The pneumatic module "actuator" slot can be hard to reach.
+
+![Pneumatic RJ45 dressed](images/electronics_module_pneumatic_rj45_dressed.jpg)
 
 Proceed with the interlock connector.  Note that in the pictures, the connectors are not fully seated - I did not have the right connector during this build.
 
@@ -113,7 +139,13 @@ Proceed with the interlock connector.  Note that in the pictures, the connectors
 
    * Connect the second DC out connector from the PowerPLATE with the attached dispense line to the plate, threading the cable in the top opening of the box.
 
+![Power and ethernet](images/electronics_module_power_and_ethernet.jpg)
+
+![Power and ethernet 2](images/electronics_module_power_ethernet_2.jpg)
+
    * Working from top to bottom of the RelayPLATE, connect the unoccupied terminals on each relay to the appropriate line.  The pinout can be changed in configuration later, but the default is as follows:
+
+![Relay board placement detail](images/electronics_module_relayboard_placement_detail.jpg)
 		Relay # | Connector | Function
 		--- | --- | ---
 		1 | RJ45 | Arm Up

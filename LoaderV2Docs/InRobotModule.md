@@ -11,13 +11,24 @@ The in-robot module is the combination of actuator, piston head, catch, frame, a
 
 {{includetext: "[![](models/AFL-101-003-01-0C.stl)](models/AFL-101-003-01-0C.stl){previewpage}", if: targetformat is html}}
 
+![Empty valve box ready for assembly](images/empty_valve_box.jpg)
+
 * 3D Print the [AFL in-robot valve box](ValveBox.md){Qty: 1} and tap the two, 1/4"-20 threaded holes on the side.
 * Attach 2 [1/8" x 10-32 push connect fittings](Parts.yaml#PushConnectFitting1032){Qty: 6} to each of the 3 [low-flow solenoid valves](Parts.yaml#LowFlowSolenoidValve){Qty: 3} and tighten to engage the O-ring on the fitting.  Do not use teflon tape on these threads; the O-ring is doing that job.
-* Insert the assembled valves into the box and thread their wires down through the grooves on the bottom into the "electronics area" on the rear of the box.  It can be helpful to label one wire from each valve (these will be the control/positive terminals; the 3 unlabeled wires are common and will all be tied together).  
+
+![Valve with fittings installed](images/actuator_valve_with_fittings.jpg)
+* Insert the assembled valves into the box and thread their wires down through the grooves on the bottom into the "electronics area" on the rear of the box.  It can be helpful to label one wire from each valve (these will be the control/positive terminals; the 3 unlabeled wires are common and will all be tied together).
+
+![All valves mounted with wires threaded](images/valvebox_all_valves_mounted_and_wires_threaded.jpg)
 >i **Note** 
 >i These valves do not have a polarity, so you can just arbitrarily pick a negative wire.  The Burkert "whisper valves" used for post-sample and piston vent *do* have polarity, and for those valves the black wire should be used as negative.
 * Take the [Burkert valve connector]{Qty: 1} and the [dangling RJ45 jack]{Qty: 1}, and fish the ends through the right side of the box into the connector space.  It can be prudent to reduce the length of the Burkert connector to about 1 m to make it easier to connect to the electronics box.  To make a dangling RJ45 jack, there are several options... easiest is to take a short length of hookup wire and terminate on pins 4 and 5 (center two) of the RJ45.  Put negative/common on pin 5, and positive on pin 4.  You can also cut a RJ11 or RJ45 extender in half, though you'd have to identify the wires...
-* Populate the [DB9M serial connector](Parts.yaml#DB9MConnector){Qty: 1} using the new leads according to the following pin diagram.  You can terminate the wires using solder into a solder cup connector, but a screw terminal solution would be better.
+
+![Dangling RJ45 jack for flow-through detail](images/dangling_rj45_jack_flowthru_detail.jpg)
+* Populate the [DB9M serial connector](Parts.yaml#DB9MConnector){Qty: 1} using the new leads according to the following pin diagram.  You can terminate the wires using solder into a solder cup connector, but a screw terminal solution would be better.  Tie all the common wires together before landing on the connector: 
+![Common wires tied together detail](images/valvebox_commonstiedtogether_detail.jpg)
+
+![DB9 connector detail for valve box](images/valvebox_db9_detail.jpg)
     * Connector #1 - Electronics box to loader
 
     * (BLACK)  #1 RINSE 1
@@ -33,6 +44,8 @@ The in-robot module is the combination of actuator, piston head, catch, frame, a
     (WHITE)  SH GROUND
 
 * For the cell flow-thru valve, connect a [dangling RJ11 jack]{Qty: 1} to the appropriate ports on the valve box.  Use the center two pins of the RJ11 jack (typically the yellow and green wires, with the yellow wire going to the positive terminal).
+
+
 * Secure the connector into place using [UV-set glue or epoxy].  Place the [AFL in-robot valve box cover]{Qty:1} into place.
 
 ## Assemble the interlock harness {pagestep}
@@ -65,9 +78,21 @@ This is a separate component because there is significant risk of inductive cros
 >! The orifices inside the actuator are tiny, and bits of PTFE or other debris can become plugged in there.  This can be fatal to the actuator in the worst case, and in the best case results in a very tedious job unjamming the small holes.  Be careful to not put thread tape on the first few turns of the thread that engage to avoid shredding the tape and be vigilant to remove any debris.  Be diligent, too, about threading tape on in the correct direction (in the rotation direction of the fitting).  The recommended McMaster fittings have a rubber o-ring that eliminate the need for tape.
 * Mount the two switches from the interlock harness to the frame (down switch) and full-up microswitch arm (up switch) using [#2-56 screws, 1/2" long](Parts.yaml#256Screw12inSS){Qty:4} and a [SIZE FOR 256 hex wrench]{Qty: 1, Cat: tool}.  You may need to use [#2-56 nuts, hex](Parts.yaml#256NutSS){Qty: 2} on the frame.
 * Mount the prepared pneumatic clamp to the back of the actuator frame using 4 [1/4"-20 socket head cap screws, 2" long](Parts.yaml#1420Screw2inSS){Qty: 4}, [1/4" washers](Parts.yaml#1420WasherSS){Qty: 8}, [1/4"-20 nuts](Parts.yaml#1420NutSS){Qty: 4}.  Test the fit into the deck slot, you sometimes need [1/4" washers] between the frame and the actuator to increase the gap so that the assembly fits well.
+
+![Actuator valve mounted to frame](images/actuator_valve_mounted_to_frame.jpg)
+
+![Another view of actuator valve mounted to frame](images/actuator_valve_mounted_to_frame_2.jpg)
 * Mount the full-up microswitch arm with the attached switch to the left side of the frame using 2 [#4-40 screws, 1/2" long](Parts.yaml#440Screw12inSS){Qty: 2}.
+
+![Full-up arm mounting detail](images/full_up_arm_mounting_detail.jpg)
 * Using a [long 3/16" hex head driver]{Qty: 1, Cat:tool} and 2 [1/4"-20 socket head cap screws, 3/4" long](Parts.yaml#1420Screw12inSS){Qty:2}, mount the assembled valve box to the left side of the frame.  Pay attention to the wire routing.  The two dangling connectors should exit the frame/box junction at the back.
 * Using a [3/16" hex key]{Qty: 1, Cat: tool}, mount the [Actuator Piston Arm] to the actuator.  Be cautious with this mounting.  It needs to be firm, but not so firm you crack the arm.  It should resist a moderate rotational force from the end of the arm without slipping.
+
+![Arm bolt detail](images/arm_bolt_detail_1.jpg)
+
+![Another arm bolt detail view](images/arm_bolt_detail_2.jpg)
+
+![Final arm bolt detail view](images/arm_bolt_detail_3.jpg)
 
 ## Install the piston and catch into the frame {pagestep}
 
@@ -79,6 +104,12 @@ This is a separate component because there is significant risk of inductive cros
 >i If you are using a machined PTFE catch, use great caution to avoid over-torquing the PTFE threads.  It would be prudent to use some [thread locker compound]{Qty: some} on these connections.
 
 * Using two [#6-32 screws, 2" long](Parts.yaml#832Screw2inSS){Qty: 2}, two [#6-32 nuts](832NutSS){Qty: 2}, and the 3D printed [AFL catch nut]{Qty: 1}, install the catch in the frame.  If using a rev. E or later frame (you are), drop the nuts into the holes in the frame and thread the bolts in.  Ensure the nut falls fully; you may need to tap it in place.  Place a [catch nut] on the outside of the catch and run the screws through the catch nut, through the catch, and into the captive nut.  Tighten until snug.  Route the tubing out the right or left side of the catch frame at the rear.
+
+![Catch carrier nut bosses](images/catch_carrier_nut_bosses_1.jpg)
+
+![Catch carrier nut detail](images/catch_carrier_nut_detail_4.jpg)
+
+![Catch mounted](images/catch_mounted.jpg)
 * Now, place the [AFL piston] with its [piston o-ring](Parts.yaml#PistonORing){Qty: 1} into the catch, and lower the catch arm.
 * Pre-thread  a [1/4" washer](Parts.yaml#14WasherSS){Qty: 1} onto a a [1/4"-20 socket head cap screw, 1 1/4" long](Parts.yaml#1420Screw2inSS){Qty: 1}, in the sequence bolt head > washer > threaded end. You can use a longer bolt if you prefer, just add a [1/4"-20 nut]{Qty: 1} between the head and washer.
 * On the arm bottom, loosely hold a [1/4"-20 nut](Parts.yaml#1420NutSS){Qty: 1} and a [1/4" washer](Parts.yaml#14WasherSS){Qty: 1}, and run the bolt through the arm and thread into the nut.  Leave loose enough for the bolt to freely rotate in the arm.  The sequence on the bolt should now be bolt head > (opt. nut) > washer > arm > washer > nut.
@@ -89,16 +120,30 @@ This is a separate component because there is significant risk of inductive cros
 
 ## Make-up internal plumbing/pneumatic connections. {pagestep}
 * Attach three [1/4"-28 inlet check valves](Parts.yaml#InlineCheckValve){Qty: 3} to three fluidic ports on the piston.  You may wish to use some [thread locker compound]{Qty: some} to secure these.
+
+![Check valve detail](images/inrobot_module_checkvalve_detail.jpg)
 * Attach a [Burkert whisper valve, type A](Parts.yaml#WhisperValveA){Qty: 1} to the piston arm using [electrical tape or similar]{Qty: some}, with the ports facing out.
+
+![Piston vent valve detail](images/inrobot_module_pistonvent_valve_detail.jpg)
 * Using [1/16" PP or ETFE tubing]{Qty: some} and [1/4"-28 x 1/16" tube flangeless nuts and ferrules]{Qty: 2} , make the shortest reasonable connection between one port on the valve and the check valve-free port on the piston head.  This is the piston top vent port, which allows the piston head to close without applying pressure shockwaves to the sample.
-* Using [1/8" PP or ETFE tubing]{Qty: some} and [1/4"-28 x 1/8" tube flangeless nuts and ferrules] on the piston end only, attach short lengths (~ 1 ft / 20 cm) of tubing to two of the check valve-equipped ports. 
+
+![Piston vent detail](images/inrobot_module_pistonvent_detail.jpg)
+
+![Piston vent line detail](images/inrobot_module_pistonvent_line_detail.jpg)
+* Using [1/8" PP or ETFE tubing]{Qty: some} and [1/4"-28 x 1/8" tube flangeless nuts and ferrules] on the piston end only, attach short lengths (~ 1 ft / 20 cm) of tubing to two of the check valve-equipped ports.
+
+![Dispense line detail](images/inrobot_module_dispense_line_detail.jpg) 
 * One tube will directly connect to the central solenoid valve in the box (the "blowout") valve.  Cut (using a [plastic tube cutter]{Qty: 1, Cat: tool}) the tube to a precise length that allows the arm to rotate without excess slack, then push it into the push connect on the valve.
 * The two rinse tubes are combined using a [1/8" push connect tee fitting](Parts.yaml#PushConnectTee18){Qty: 1} just after the valve box.  Cut two short 2-3" lengths of tubing and run them from the valve exit into the two co-linear ports of the tee.  Cut the dangling tube from the piston head to appropriate length, then attach to the perpendicular port of the tee.
 * The final port goes to the dispense controller.  Run a longer length of [1/8" PP or ETFE tubing], perhaps as long as 1 m, from the piston head.
+
+![HowTo 1428 fitting](images/inrobot_module_howto1428_fitting.jpg)
 * Attach a dangling RJ11 jack to the electronics box 
 * Connect the wiring from this valve to the appropriate pins on the DB9 connector (pin 5 as per the pin diagram).
 
 ## Connect the electrical components {pagestep}
+
+![Wire loom detail](images/inrobot_module_wire_loom_detail.jpg)
 
 * Verify all valve connections to the DB9 connector according to the pin diagram provided earlier.
 * Connect the limit switch harness to the electronics module using a RJ45 cable.
@@ -110,6 +155,14 @@ This is a separate component because there is significant risk of inductive cros
 * Ensure the OT-2 is powered off before installing the in-robot module.
 * Carefully place the assembled in-robot module into slot 10 of the OT-2 deck. The module should fit securely with the pneumatic clamp aligned with the deck slot.
 * Route the pneumatic tubing and electrical connections through the appropriate access points in the OT-2 chassis.
+
+![Removed deck to access chassis](images/removed_deck.jpg)
+
+![Deck markings detail](images/removeddeck_markings1.jpg)
+
+![Deck markings detail 2](images/removeddeck_markings_detail.jpg)
+
+![Deck markings detail 3](images/removeddeck_markings_detail_2.jpg)
 * Connect the DB9 connector to the corresponding connector on the electronics module.
 * Connect the RJ45 jack from the interlock harness to the corresponding port on the electronics module.
 * Install the door switch carrier on the OT-2 door frame using the magnets to secure it in place. Adjust the position so that the switch is properly activated when the door is closed.
