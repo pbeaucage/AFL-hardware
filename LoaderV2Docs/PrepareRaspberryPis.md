@@ -21,7 +21,7 @@ This guide provides instructions for preparing Raspberry Pi SD cards for use in 
 
 * Insert the MicroSD card into your computer's SD card reader.
 * Launch the Raspberry Pi Imager software.
-* Click on "CHOOSE OS" and select "Raspberry Pi OS (32-bit)" from the list. This is the standard Raspberry Pi operating system based on Debian.
+* Click on "CHOOSE OS" and select "Raspberry Pi OS (64-bit)" from the list. This is the standard Raspberry Pi operating system based on Debian.
 * Click on "CHOOSE STORAGE" and select your MicroSD card from the list. Make sure you select the correct device to avoid overwriting data on other drives.
 
 ## Configure OS settings before writing {pagestep}
@@ -39,6 +39,7 @@ This guide provides instructions for preparing Raspberry Pi SD cards for use in 
   * Check "Set locale settings"
     * Time zone: `[your time zone]`
     * Keyboard layout: `[your keyboard layout]`
+  * On the second tab, set ssh to "Use password authentication"
   * Click "SAVE" to apply these settings.
 
 ## Write the image to the SD card {pagestep}

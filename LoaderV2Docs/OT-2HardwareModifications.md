@@ -10,7 +10,10 @@ Perhaps surprisingly, you only need to make two modifications to a standard [OT-
 *  drill and tap (using a [drill]{Qty:1, Cat:tool}, [#7 - 13/64" - 0.2010" drill bit]{Qty:1, Cat:tool}, and [1/4"-20 tap and handle]{Qty:1, Cat: tool}) two ¼—20 holes into the deck in slot 10 (top left) as hold down points for the loader. 
 
  It’s worth noting that this doesn’t make the slot unusable should you wish to remove the loader later.
-To-do: add dimensions from rails.  Can read these for now from the loader frame drawing.
+
+The holes are 1" forward from the back rail in slot 10, and 1.5" and 3.5" from the left rail, respectively:
+
+
 ## Drill and tap two ¼”-20 mounting holes on the left side of the robot for the frame. {pagestep}
 
 >! This is a little nerve wracking because 

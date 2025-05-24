@@ -32,33 +32,74 @@ Materials:
 
 * 3D print the [AFL Pneumatic System Frame]{Qty: 1} if not already available.
 
-* Mount the [FiveWayValve]{Qty: 1} to the designated position on the frame using [M4x10 screws]{Qty: 4} and a [No. 2 Phillips screwdriver]{Qty: 1, Cat: tool}. The valve should be oriented with the main port facing the input side of the frame.
+* Setup the valves and regulators with fittings.
 
-* Install the two [AirRegulator]{Qty: 2} units to their designated positions on the frame using [M4x10 screws]{Qty: 4}. One regulator will be used for the actuator pressure (60-80 psig) and the other for the dispensing pressure (15-30 psig).
+   - [FiveWayValve]{Qty: 1}  On the valve, install [PushConnector14NPTto14Tube]{Qty: 3} on ports marked 1, 2, and 4.  
+   - [AirRegulator]{Qty: 2}: 
+     - On the first regulator (actuator), install a [PushConnector14NPTtoTee14Tube]{Qty: 1} on the inlet side and a [PushConnector14NPTto14Tube]{Qty: 1} on the outlet side.  
+	 - On the other regulator (dispense), install a [PushConnector14NPTto14Tube]{Qty: 1} on the inlet side and a [14NPTnipple]{Qty: 1}, [14NPTtee]{Qty: 1}, [14NPT20psiPRV]{Qty: 1}, and [PushConnector14NPTtoTee18Tube]{Qty: 1} on the outlet side.
+   -  [DispenseController]{Qty: 1} install a [PushConnector14NPTto18Tube]{Qty: 1} on the inlet side and a [PushConnector14NPTto18Tube]{Qty: 1} on the outlet side.
+   - [SystemEnableValve]{Qty: 1}, install a [1032to18Tube]{Qty: 1} fitting on one side, and a [1032to18TubeTee]{Qty: 1} fitting on the other side. 
 
-* Label each regulator clearly with its intended pressure range to avoid confusion during operation.
+* Flip the regulator dials: 
+    - rotate the covering on the face with the dial in the direction indicated by the arrow, about 5-10 degrees until it lifts off:
+
+	- undo the two philips screws on that face, and the plate opposite.  Remove the plate and dial carefully.
+	- install the dial on the side you took the plate off of, and the plate on the opposite side, using the screws you removed.  Tighten screws snug, you will feel the rubber o-rings engaging on both sides.
+	- set the green arrows on the dial face to the pressure range for the regulator (10-20 psig for the dispense regulator, 40-80 psig for the actuator regulator).  These are just a usability indicator.
+	- replace the faceplate aligning the grooves and rotate to lock in place.
+	- you should now have a regulator that sits flat on the bottom, inlet on left, outlet on right.
+
+* Mount the valve to the designated position on the frame using [M3x35 screws]{Qty: 3}, [M3 nuts]{Qty: 3}, and a [2.5mm hex wrench]{Qty: 1, Cat: tool}. The valve should be oriented matching the holes on the frame.
+
+* Place the two regulators in their designated positions on the frame. One regulator will be used for the actuator pressure (60-80 psig) and the other for the dispensing pressure (15-30 psig), actuator on left, dispense on right
 
 ## Install pneumatic connections {pagestep}
 
-* Install [PushConnector14NPTto14Tube]{Qty: 8} fittings to the appropriate ports on the valve and regulators. Ensure all connections are tight to prevent leaks.
+* Place the fitting-equipped components into the slots on the frame.  Thread the wires from the enable valve through the slot in the bottom of its housing and into the connection box at front right.
 
-* Install [PushConnector14NPTto18Tube]{Qty: 4} fittings to the ports that will connect to the smaller tubing used for dispensing.
+We will generally proceed in the order from inlet to outlet.
 
-* Connect the main air/nitrogen input to the first regulator using [NylonTube14OD]{Qty: 1, Unit: ft, Qty_Value: 2}.
+* Run a [NylonTube14OD]{Qty: 1, Unit: mm, Qty_Value: 117} from either the tee on the inlet of the actuator regulator, or a separate [14NylonPushTee]{Qty: 1} to the inlet of the dispense regulator.  If using a separate tee, run a short stub of [NylonTube14OD]{Qty: 1, Unit: mm, Qty_Value: 32} to connect the tee to the inlet of the actuator regulator - we found 32 mm sufficient for the insertion depth of two fittings.
 
-* Using [PushConnectTee14]{Qty: 1}, split the output from the first regulator to feed both the five-way valve and the second regulator.
+* Connect the actuator regulator output to the input of the five-way valve - port #1 on the bottom using [NylonTube14OD]{Qty: 1, Unit: ft, Qty_Value: 1}.  It is easiest to make up the fitting at the regulator with excess tubing, run the line, and mark/cut the precise length to reach the valve.  We're done with the first (actuator) system!
 
-* Connect the output from the five-way valve to the port that will lead to the actuator in the robot using [NylonTube14OD]{Qty: 1, Unit: ft, Qty_Value: 3}.
+* Next, we'll run a line from the dispense regulator output to the enable valve inlet tee (or a separate Nylon push connect tee).  Connect some [TefzelTube18OD]{Qty: 1, Unit: ft, Qty_Value: 1} to the tee, and run it to the enable valve tee on the bottom input.  
 
-* Connect the output from the second regulator to the [PushConnectTee14]{Qty: 1} that will split the flow to the dispensing components using [NylonTube14OD]{Qty: 1, Unit: ft, Qty_Value: 2}.
+* Next, we'll run a line from the enable valve input to the dispense controller inlet.  Connect some [TefzelTube18OD]{Qty: 1, Unit: ft, Qty_Value: 1} to the tee, and run it to the left side of the dispense controller.  Done with dispense! 
 
-* Run [ETFETube18OD]{Qty: 1, Unit: ft, Qty_Value: 5} from the appropriate push connectors to where they will connect to the dispensing components.
+We now have 4 exposed ports on the pneumatic controller:
+ - two 1/4" push connect ports for the actuator up and down lines
+ - a 1/8" push connect port for the controlled dispense
+ - a 1/8" push connect port to the bottles and blowout valves
 
-## Install electrical connections {pagestep}
 
-* Mount the [RJ45 jack]{Qty: 1} to the designated position on the frame. This will be used to connect the pneumatic module to the electronics module.
+## Make up electrical connections {pagestep}
 
-* Wire the RJ45 jack to the control inputs of the five-way valve according to the wiring diagram (to be provided separately).
+* Using a [Phillips No. 2 screwdriver]{Qty: 1, Cat: tool}, remove the two connectors from the two sides of the five-way valve.  
+
+* It is helpful for space-saving reasons to flip the inner part of the connector so the wires face inward.  To do so, insert a [flathead screwdriver]{Qty: 1, Cat: tool} into the slot on the connector and pry the terminal block out, you may need to unscrew the top screw more to get past the captive section.  When we reassemble these connectors, we will want to have the cable exit facing the ~single~ side of the connector rather than the double.
+
+* Get some hook-up wire; almost any two-conductor wire will do.  We will be connecting the RJ45 jack to the control inputs of the five-way valve.  It is helpful to have two colors or ideally three - up, down, and common.  The conventions here are mostly a suggestion.
+
+* Connect the red line to the #1 terminal inside the beige connector and a black line to the #2 terminal.  Run the wire through the strain relief and out.  Re-seat the screw, tighten the strain relief, and snap the connector into place
+
+* Repeat for the blue line on the #1 terminal of the black connector.
+
+* Connect the plugs to the five-way valve and route the wires into the connector box.
+
+* Land the wires on the RJ45 following the pinout:
+
+| Pin | Color | Function |
+| --- | --- | --- |
+| 1   | Red   | Up |
+| 2   | Black | Up-Common |
+| 4   | Blue  | Down |
+| 5   | Black | Down-Common |
+| 7   | Black (unlabeled) | Enable |
+| 8   | Black (unlabeled) | Enable-Common |
+
+* Place the RJ45 in position and neatly store the excess wire in the box.
 
 ## Test the pneumatic system {pagestep}
 
