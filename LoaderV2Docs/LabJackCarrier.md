@@ -36,7 +36,6 @@ If using the digital out to drive the dispense controller, install a [LJTick-DAC
 Connect the wiring harness from the OCB board (either floating or in the mounting frame) to the LabJack: red to VS, black to GND, green (sensor reset/calibrate) to FIO4, white (sensor voltage) to AIN0.  If using a second sensor, wire it as above but green to FIO5 and white to AIN1.
 
 ![Sensor hookup to LabJack detail](images/sensor-hookup-to-labjack-detail.jpg)
-
 ![Sensor hookup to LabJack detail 2](images/sensor-hookup-to-labjack-detail-2.jpg)
 
 Take the [connector for the dispense controller]{Qty: 1} and connect it to the LJTick-DAC: white (input) to DACA, blue (common) to GND.  We will need to route 24V power to the device using brown (24V).  Black (output) will not be used.

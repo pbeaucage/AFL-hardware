@@ -61,9 +61,7 @@ See the Pi-Plates POWERplate24 docs [here](https://pi-plates.com/powerplate24-us
 * On the RelayPLATE, we need to jumper the 24V input across the common of all relays.  I usually do this with short lengths of wire like so:
 
 ![Relay plate bare](images/electronics_module_relayplate_bare.jpg)
-
 ![Relay plate jumpered](images/electronics_module_relayplate_jumpered.jpg)
-
 ![Relay plate jumpered top view](images/electronics_module_relayplate_jumpered_top.jpg) 
 
 
@@ -81,7 +79,6 @@ Leave a long, dangling end of wire to connect to the main shutoff switch.
 * To the [solder-cup DB9 female connector, panel mount]{Qty: 1} solder jumper wires to pins 1-6.  These will match the pinout used in the in-robot module, so it may be prudent to match colors if you used them or will use them there.  But it is entirely arbitrary.  Note down the pin number and corresponding color for later.
 
 ![DB9 assembly detail](images/electronics_module_db9_assemblydetail.jpg)
-
 ![DB9 connector dressed](images/electronics_module_db9_connector_dressed.jpg)
 
 * Prepare the female RJ45 connector to connect to the pneumatic module.  Take a punchdown-style RJ45 jack and run jumper wires matching the pneumatic module:
@@ -140,7 +137,6 @@ Proceed with the interlock connector.  Note that in the pictures, the connectors
    * Connect the second DC out connector from the PowerPLATE with the attached dispense line to the plate, threading the cable in the top opening of the box.
 
 ![Power and ethernet](images/electronics_module_power_and_ethernet.jpg)
-
 ![Power and ethernet 2](images/electronics_module_power_ethernet_2.jpg)
 
    * Working from top to bottom of the RelayPLATE, connect the unoccupied terminals on each relay to the appropriate line.  The pinout can be changed in configuration later, but the default is as follows:

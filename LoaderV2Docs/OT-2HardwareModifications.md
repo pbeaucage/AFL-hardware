@@ -13,6 +13,8 @@ Perhaps surprisingly, you only need to make two modifications to a standard [OT-
 
 The holes are 1" forward from the back rail in slot 10, and 1.5" and 3.5" from the left rail, respectively:
 
+![Removed deck][images/removed_deck.jpg]
+![Marked locations][images/removeddeck_markings_detail_2.jpg]
 
 ## Drill and tap two ¼”-20 mounting holes on the left side of the robot for the frame. {pagestep}
 
